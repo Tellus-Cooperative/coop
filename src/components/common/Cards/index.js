@@ -58,15 +58,15 @@ const Cards = () => {
             </div>
             <div className="flex w-8/12 justify-end flex-wrap lg:space-x-3">
               <button className="bg-mygrey mb-4 w-36 lg:w-40 h-10 flex items-center justify-center rounded-2xl">
-                <p className="text-sm">Smart Contracts</p>
+                <p className="text-sm text-white">Smart Contracts</p>
               </button>
 
               <button className="bg-mygrey mb-4 w-36 lg:w-40 h-10 flex items-center justify-center rounded-2xl">
-                <p className="text-sm">Smart Contracts</p>
+                <p className="text-sm text-white">Smart Contracts</p>
               </button>
 
               <button className="bg-mygrey mb-4 w-36 lg:w-40 h-10 flex items-center justify-center rounded-2xl">
-                <p className="text-sm">Smart Contracts</p>
+                <p className="text-sm text-white">Smart Contracts</p>
               </button>
             </div>
           </div>

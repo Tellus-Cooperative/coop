@@ -1,11 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import BountyListing from "./bountylisting";
-import Home from "./components/ExploreBounties";
+import Home from "./home";
 import NewListing from "./bountysubmission"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

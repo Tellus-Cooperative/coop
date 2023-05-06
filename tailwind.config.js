@@ -9,7 +9,8 @@ module.exports = {
       colors: {
        mygrey: '#979797',
        green:'#71C666',
-       lightgrey: ""
+       lightgrey: "",
+       borderColor:'#d9d9d9'
       }
     },
   },

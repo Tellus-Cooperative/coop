@@ -3,7 +3,7 @@ import React from "react";
 const Listing = () => {
   return (
     <section id="bountylisting" className="pb-24 mt-10">
-      <div className="w-10/12 mx-auto">
+      <div>
         <div className="content">
           <h1 className="text-black text-3xl font-bold">Bounty Listing</h1>
 

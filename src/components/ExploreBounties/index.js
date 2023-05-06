@@ -4,7 +4,7 @@ import LeftSideBar from './leftSideBar';
 
 const ExploreBounties = () => {
     return ( <>
-  <section id="bountyexplore" className="mt-10 w-9/12 mx-auto">
+  <section id="bountyexplore" className="mt-10 mx-auto">
     <div className="flex">
         <div className="w-4/12">
             <LeftSideBar />

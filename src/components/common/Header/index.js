@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <>
       <section id="header" className="">
-        <div className="w-10/12 mx-auto py-8 px-4">
+        <div className="py-8 border-b border-borderColor">
           <div className="flex justify-between items-center">
             <div>
               <img src="/logo.png" alt="Logo" />

@@ -3,10 +3,15 @@ import React from "react";
 const NewBounty = () => {
   return (
     <section id="bountylisting" className="pb-24 mt-10">
-      <div className="w-10/12 mx-auto">
+      <div className="">
         <div className="content">
           <div className="mt-5 flex">
             <div className="w-7/12">
+              <div className="back mb-3">
+                <h3 className="text-mygrey font flex items-center"> 
+                <span><img src="/back.png" alt="" /></span>
+                Back</h3>
+              </div>
               <div className="data border border-black rounded-xl px-10 py-10">
                 <div className="flex">
                   <div className="pr-5">
