@@ -10,7 +10,8 @@ module.exports = {
        mygrey: '#979797',
        green:'#71C666',
        lightgrey: "",
-       borderColor:'#d9d9d9'
+       borderColor:'#d9d9d9',
+       blueColor: '#2E4153'
       }
     },
   },

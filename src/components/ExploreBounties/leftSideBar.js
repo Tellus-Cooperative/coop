@@ -4,7 +4,7 @@ const LeftSideBar = () => {
   return (
     <>
       <section id="bounties">
-        <div className="border-mygrey border-2 rounded-lg py-10 w-9/12">
+        <div className="border-mygrey border-2 rounded-2xl py-10 w-full">
           <div className="flex justify-center">
             <div className="content">
               <img src="/bountylogo.png" alt="" />
@@ -22,7 +22,7 @@ const LeftSideBar = () => {
             </ul>
           </div>
         </div>
-        <div className="border-mygrey border-2 rounded-2xl mt-10 pt-10 pb-20 w-9/12">
+        <div className="border-mygrey border-2 rounded-2xl mt-10 pt-10 pb-20 w-full">
           <div className="content pb-3 border-b border-mygrey">
             <h1 className="text-base text-black font-bold pl-5">Badges</h1>
           </div>

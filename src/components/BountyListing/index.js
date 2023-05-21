@@ -60,7 +60,7 @@ const Listing = () => {
               </div>
 
               <div className="form">
-                <div className="border-mygrey border-2 rounded-2xl mt-10 pt-10 pb-20 w-11/12">
+                <div className="border-mygrey border-2 rounded-2xl mt-10 pt-10 pb-20 w-12/12">
                   <div className="content pb-3 border-b border-mygrey">
                     <h1 className="text-base text-black font-bold pl-5">
                       Apply to Bounty

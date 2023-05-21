@@ -6,6 +6,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import BountyListing from "./bountylisting";
 import Home from "./home";
 import NewListing from "./bountysubmission"
+import MyBounties from "./mybounties";
+import BountyOpen from "./bounty";
+import Propsal from "./proposal";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,6 +17,9 @@ root.render(
       <Route path="/" element={<Home />} />
       <Route path="/listing" element={<BountyListing />} />
       <Route path="/newsubmission" element={<NewListing />} />
+      <Route path="/mybounties" element={<MyBounties />} />
+      <Route path="/bounty" element={<BountyOpen />} />
+      <Route path="/newproposal" element={<Propsal />} />
     </Routes>
   </Router>
 );

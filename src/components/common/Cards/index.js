@@ -3,7 +3,7 @@ import React from "react";
 const Cards = () => {
   return (
     <>
-      <div className="w-full mt-5 pl-6 pr-3 py-10 rounded-2xl border-2 border-mygrey w-full">
+      <div className="w-full mt-5 pl-6 pr-3 pt-10 pb-4 rounded-2xl border-2 border-mygrey w-full">
         <div className="flex justify-between">
           <div className="w-4/12">
             <div className="tags">
@@ -52,8 +52,8 @@ const Cards = () => {
             review to ensure that...
           </p>
 
-          <div className="flex  mt-3">
-            <div className="w-4/12 time">
+          <div className="flex mt-3">
+            <div className="w-4/12 time flex items-center">
               <p className="tracking-wider leading-normal">5 hours ago</p>
             </div>
             <div className="flex w-8/12 justify-end flex-wrap lg:space-x-3">
