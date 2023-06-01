@@ -9,13 +9,15 @@ import NewListing from "./bountysubmission"
 import MyBounties from "./mybounties";
 import BountyOpen from "./bounty";
 import Propsal from "./proposal";
+import AllBounties from './explore';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Router>
     <Routes>
-      <Route path="/" element={<Home />} />
+    <Route path="/" element={<AllBounties />} />
       <Route path="/listing" element={<BountyListing />} />
+      <Route path="/allbounties" element={<Home />} />
       <Route path="/newsubmission" element={<NewListing />} />
       <Route path="/mybounties" element={<MyBounties />} />
       <Route path="/bounty" element={<BountyOpen />} />

@@ -1,8 +1,14 @@
 import React from "react";
 import Cards from "../common/Cards";
-import LeftSideBar from "../ExploreBounties/leftSideBar";
+import LeftSideBar from "../common/ProfileSidebar";
+import {useNavigate} from 'react-router-dom';
 
 const MyBounties = () => {
+  const navigate = useNavigate();
+
+  const handleNavigator = () => {
+  navigate('/bounty')
+  }
   return (
     <>
       <section id="bountyexplore" className="mt-10 mx-auto">
@@ -16,7 +22,7 @@ const MyBounties = () => {
                 <h1 className="text-3xl font-bold">My Bounties</h1>
               </div>
               <div className="cards mt-7">
-                <Cards />
+                <Cards handleClick={handleNavigator}/>
               </div>
             </div>
           </div>

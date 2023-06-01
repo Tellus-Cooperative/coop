@@ -1,14 +1,17 @@
 import React from "react";
+import {useNavigate} from 'react-router-dom';
 
 const Proposal = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="bountylisting" className="pb-24 mt-10">
       <div className="">
         <div className="content">
           <div className="mt-5 flex">
             <div className="w-7/12">
-              <div className="back mb-3">
-                <h3 className="text-mygrey font flex items-center">
+              <div onClick={() => navigate(-1)} className="back mb-3">
+                <h3 className="hover:cursor-pointer text-mygrey font flex items-center">
                   <span>
                     <img src="/back.png" alt="" />
                   </span>

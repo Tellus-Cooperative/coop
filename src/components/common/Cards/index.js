@@ -1,9 +1,9 @@
 import React from "react";
 
-const Cards = () => {
+const Cards = ({handleClick}) => {
   return (
     <>
-      <div className="w-full mt-5 pl-6 pr-3 pt-10 pb-4 rounded-2xl border-2 border-mygrey w-full">
+      <div onClick={() => handleClick()} className="w-full mt-5 pl-6 pr-3 pt-10 pb-4 rounded-2xl border-2 border-mygrey w-full">
         <div className="flex justify-between">
           <div className="w-4/12">
             <div className="tags">
