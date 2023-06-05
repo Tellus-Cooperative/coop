@@ -1,11 +1,12 @@
+
 import React from 'react';
 import Layout from './components/common/Layout';
-import AllBounties from './components/AllBounties';
+import ExploreBounties from './components/ExploreBounties';
 
 const Home = () => {
     return ( 
         <Layout>
-            <AllBounties />
+            <ExploreBounties />
         </Layout>
      );
 }

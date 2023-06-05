@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "../common/Cards";
+import Cards from "../common/Cards/proposalcards";
 import LeftSideBar from "../common/ProfileSidebar";
 import {useNavigate} from 'react-router-dom';
 
@@ -20,6 +20,9 @@ const MyBounties = () => {
             <div className="content">
               <div className="flex justify-between">
                 <h1 className="text-3xl font-bold">My Bounties</h1>
+              </div>
+              <div className="cards mt-7">
+                <Cards handleClick={handleNavigator}/>
               </div>
               <div className="cards mt-7">
                 <Cards handleClick={handleNavigator}/>

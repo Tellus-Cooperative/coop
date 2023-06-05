@@ -10,7 +10,7 @@ const NewBounty = () => {
         <div className="content">
           <div className="mt-5 flex">
             <div className="w-7/12">
-              <div onClick={() => navigate(-1)} className="hover:cursor-pointerback mb-3">
+              <div onClick={() => navigate(-1)} className="hover:cursor-pointer back mb-3">
                 <h3 className="text-mygrey font flex items-center"> 
                 <span><img src="/back.png" alt="" /></span>
                 Back</h3>

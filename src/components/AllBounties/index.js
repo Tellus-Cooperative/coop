@@ -1,10 +1,9 @@
 import React from "react";
-import {useNavigate} from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom";
 
 const AllBounties = () => {
-    const navigate = useNavigate();
-    
+  const navigate = useNavigate();
+
   return (
     <>
       <section id="allbounties">
@@ -14,41 +13,50 @@ const AllBounties = () => {
           </div>
 
           <div className="list grid grid-cols-3 gap-4 mt-12">
-            <div onClick = {() => navigate('/mybounties')} className="border-mygrey border-2 rounded-xl py-10 w-9/12">
+            <div
+              onClick={() => navigate("/mybounties")}
+              className="border-mygrey border-2 rounded-xl py-10 w-9/12"
+            >
               <div className="flex flex-col items-center">
-                <div className="content">
-                  <img src="/profile.png" alt="" />
-                  <h1 className="text-xl text-black font-bold">
+                <div className="content flex-col items-center justify-center">
+                  <img className="mx-auto flex" src="/profile.png" alt="" />
+                  <h1 className="text-xl text-black mt-3 font-bold text-center">
                     My Cooperative
                   </h1>
-                  <p>300 Active Bounties</p>
-                  <p>678 Bounties Paid</p>
+                  <p className="text-center">2k Memebers</p>
+                  <button className="border border-2 mt-3 rounded-3xl bg-transparent w-52 border-mygrey py-3 text-mygrey font-semibold">
+                    Join
+                  </button>
                 </div>
               </div>
             </div>
 
             <div className="border-mygrey border-2 rounded-xl py-10 w-9/12">
               <div className="flex flex-col items-center">
-                <div className="content">
-                  <img src="/profile.png" alt="" />
-                  <h1 className="text-xl text-black font-bold">
+              <div className="content flex-col items-center justify-center">
+                  <img className="mx-auto flex" src="/profile.png" alt="" />
+                  <h1 className="text-xl text-black mt-3 font-bold text-center">
                     My Cooperative
                   </h1>
-                  <p>300 Active Bounties</p>
-                  <p>678 Bounties Paid</p>
+                  <p className="text-center">2k Memebers</p>
+                  <button className="border border-2 mt-3 rounded-3xl bg-transparent w-52 border-mygrey py-3 text-mygrey font-semibold">
+                    Join
+                  </button>
                 </div>
               </div>
             </div>
 
             <div className="border-mygrey border-2 rounded-xl py-10 w-9/12">
               <div className="flex flex-col items-center">
-                <div className="content">
-                  <img src="/profile.png" alt="" />
-                  <h1 className="text-xl text-black font-bold">
+              <div className="content flex-col items-center justify-center">
+                  <img className="mx-auto flex" src="/profile.png" alt="" />
+                  <h1 className="text-xl text-black mt-3 font-bold text-center">
                     My Cooperative
                   </h1>
-                  <p>300 Active Bounties</p>
-                  <p>678 Bounties Paid</p>
+                  <p className="text-center">2k Memebers</p>
+                  <button className="border border-2 mt-3 rounded-3xl bg-transparent w-52 border-mygrey py-3 text-mygrey font-semibold">
+                    Join
+                  </button>
                 </div>
               </div>
             </div>

@@ -15,9 +15,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Router>
     <Routes>
-    <Route path="/" element={<AllBounties />} />
+    <Route path="/" element={<Home />} />
       <Route path="/listing" element={<BountyListing />} />
-      <Route path="/allbounties" element={<Home />} />
+      <Route path="/allbounties" element={<AllBounties />} />
       <Route path="/newsubmission" element={<NewListing />} />
       <Route path="/mybounties" element={<MyBounties />} />
       <Route path="/bounty" element={<BountyOpen />} />
