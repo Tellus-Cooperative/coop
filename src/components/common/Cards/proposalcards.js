@@ -37,9 +37,9 @@ const ProposalCards = ({handleClick}) => {
         </div>
 
         <div className="content">
-          <h1 className="text-black text-3xl mt-5 font-bold">Governance Proposal</h1>
+          <h1 className="text-black text-3xl mt-2 font-bold">Governance Proposal</h1>
 
-          <p className="mt-5 pr-3">
+          <p className="mt-4 pr-3">
             As a bounty hunter for the Soroban Contract Writing in Rust, you
             will be responsible for thoroughly testing our platform and
             identifying any potential security vulnerabilities or bugs. You will

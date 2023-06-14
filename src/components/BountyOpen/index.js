@@ -7,7 +7,7 @@ const Bounty = () => {
         <div className="content">
           <h1 className="text-black text-3xl font-bold">Governance Proposal</h1>
 
-          <div className="mt-5 flex">
+          <div className="mt-5 flex justify-between">
             <div className="w-7/12">
               <div className="flex items-center justify-between">
                 <div className="button ml-3">
@@ -68,16 +68,16 @@ const Bounty = () => {
                   </div>
 
                   <div className="form-content px-5 pt-5">
-                    <button className="border-black border w-full rounded-full px-10 py-4 flex justify-center mx-auto my-4 flex text-center">
+                    <button className="border-black border w-full rounded-full px-10 py-5 flex justify-center mx-auto my-2 flex text-center">
                       <p className="font-bold text-center">Approve</p>
                     </button>
-                    <button className="border-black border w-full rounded-full px-10 py-4 flex justify-center mx-auto my-4 flex text-center">
+                    <button className="border-black border w-full rounded-full px-10 py-5 flex justify-center mx-auto my-2 flex text-center">
                       <p className="font-bold text-center">Reject</p>
                     </button>
-                    <button className="border-black border w-full rounded-full px-10 py-4 flex justify-center mx-auto my-4 flex text-center">
+                    <button className="border-black border w-full rounded-full px-10 py-5 flex justify-center mx-auto my-2 flex text-center">
                       <p className="font-bold text-center">Abstain</p>
                     </button>
-                    <button className="border-black bg-blueColor border w-full rounded-full px-10 py-4 flex justify-center mx-auto my-4 flex text-white text-center">
+                    <button className="border-black bg-blueColor border w-full rounded-full px-10 py-5 flex justify-center mx-auto my-2 flex text-white text-center">
                       <p className="font-bold text-center">Vote</p>
                     </button>
                   </div>
@@ -85,9 +85,9 @@ const Bounty = () => {
               </div>
             </div>
 
-            <div className="w-5/12">
+            <div className="ml-3 w-5/12">
               <section className="w-10/12 mx-auto">
-                <div className="border-mygrey border-2 rounded-xl py-10 w-9/12">
+                <div className="border-mygrey border-2 rounded-xl py-10 ml-auto w-9/12">
                   <div className="content pb-3 border-b border-mygrey">
                     <h1 className="text-base text-black font-bold pl-5">
                       Information
@@ -133,7 +133,7 @@ const Bounty = () => {
                   </div>
                 </div>
 
-                <div className="border-mygrey border-2 rounded-2xl mt-10 pt-10 pb-20 w-9/12">
+                <div className="border-mygrey border-2 rounded-2xl mt-10 pt-10 pb-20 ml-auto w-9/12">
                   <div className="content pb-3 border-b border-mygrey">
                     <h1 className="text-base text-black font-bold pl-5">
                       Current Results

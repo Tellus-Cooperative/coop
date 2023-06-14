@@ -68,7 +68,7 @@ const Proposal = () => {
 
             <div className="w-5/12">
               <section className="w-10/12 mx-auto">
-                <div className="border-mygrey border-2 rounded-xl px-4 w-9/12 py-3">
+                <div className="border-mygrey border-2 mt-10 rounded-xl px-4 w-9/12 py-3 ml-auto">
                   <button className="border-black border w-full rounded-full px-10 py-4 flex justify-center mx-auto my-4 flex text-center">
                     <p className="font-bold text-center">Preview</p>
                   </button>

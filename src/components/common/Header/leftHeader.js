@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const LeftHeader = () => {
   return (
-    <section id="leftheader" className="w-full">
-      <div className="px-3 ">
+    <section id="leftheader" className="w-full min-h-screen">
+      <div className="px-1 ">
         <div className="py-4 flex flex-col items-center">
           <div className="mt-5">
             <Link to="/">

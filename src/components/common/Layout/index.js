@@ -6,12 +6,17 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className="flex">
-        <div className="w-1/12 border-r border-borderColor">
+        <div className="w-[5%] border-r border-borderColor">
           <LeftHeader />
         </div>
-        <div className="w-10/12 mx-auto">
-          <Header />
-      {children}
+        <div className="w-full mx-auto">
+          <div className="w-full border-b border-borderColor">
+            <div className="w-10/12 mx-auto">
+              <Header />
+            </div>
+          </div>
+
+          <div className="w-10/12 mx-auto">{children}</div>
         </div>
       </div>
     </>
