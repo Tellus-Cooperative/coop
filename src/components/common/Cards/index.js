@@ -1,6 +1,8 @@
 import React from "react";
 
-const Cards = ({handleClick}) => {
+const Cards = ({handleClick, item}) => {
+
+
   return (
     <>
       <div onClick={() => handleClick()} className="w-full mt-5 pl-6 pr-3 pt-10 pb-4 rounded-2xl border-2 border-mygrey w-full">
@@ -18,7 +20,7 @@ const Cards = ({handleClick}) => {
                 <div className="tag1">
                   <div className="flex items-center">
                     <img src="/tree.png" alt="" />
-                    <p className="pl-1 text-sm">GAD...RARW</p>
+                    <p className="pl-1 text-sm">{item?.public_address?.substring(0,10)}</p>
                   </div>
                 </div>
               </div>
@@ -29,7 +31,7 @@ const Cards = ({handleClick}) => {
             <div className="flex justify-end">
               <div className="button">
                 <button className="bg-green px-6 py-1 text-white font-semibold rounded-full">
-                  1,000 XLM
+                  {item.payment_amount} XLM
                 </button>
               </div>
               <div className="button ml-3">
@@ -42,14 +44,10 @@ const Cards = ({handleClick}) => {
         </div>
 
         <div className="content">
-          <h1 className="text-black text-3xl mt-5 font-bold">Bounty Listing</h1>
+          <h1 className="text-black text-3xl mt-5 font-bold">{item.bounty_name}</h1>
 
           <p className="mt-5 pr-3">
-            As a bounty hunter for the Soroban Contract Writing in Rust, you
-            will be responsible for thoroughly testing our platform and
-            identifying any potential security vulnerabilities or bugs. You will
-            be tasked with conducting comprehensive penetration testing and code
-            review to ensure that...
+          {item.bounty_description}
           </p>
 
           <div className="flex mt-3">
@@ -58,15 +56,15 @@ const Cards = ({handleClick}) => {
             </div>
             <div className="flex w-8/12 justify-end flex-wrap lg:space-x-3">
               <button className="bg-mygrey mb-4 w-36 lg:w-40 h-10 flex items-center justify-center rounded-2xl">
-                <p className="text-sm text-white">Smart Contracts</p>
+                <p className="text-sm text-white">{item.bounty_difficulty}</p>
               </button>
 
               <button className="bg-mygrey mb-4 w-36 lg:w-40 h-10 flex items-center justify-center rounded-2xl">
-                <p className="text-sm text-white">Smart Contracts</p>
+                <p className="text-sm text-white">{item.bounty_topic}</p>
               </button>
 
               <button className="bg-mygrey mb-4 w-36 lg:w-40 h-10 flex items-center justify-center rounded-2xl">
-                <p className="text-sm text-white">Smart Contracts</p>
+                <p className="text-sm text-white">{item.bounty_type}</p>
               </button>
             </div>
           </div>

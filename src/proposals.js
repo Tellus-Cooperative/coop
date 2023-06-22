@@ -1,11 +1,11 @@
 import React from 'react';
 import Layout from './components/common/Layout';
-import MyBounties from './components/MyBounties';
+import Proposals from './components/Proposals';
 
 const MyBountiesPage = () => {
     return ( 
         <Layout>
-            <MyBounties />
+            <Proposals />
         </Layout>
      );
 }

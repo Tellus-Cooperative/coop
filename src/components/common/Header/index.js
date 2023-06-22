@@ -1,6 +1,26 @@
-import React from "react";
+import React, { useState, useEffect, Fragment } from "react";
+import { useSorobanReact } from "@soroban-react/core";
+import { ConnectButton } from "@soroban-react/connect-button";
+import { WalletData } from "@soroban-react/wallet-data";
 
 const Header = () => {
+  const [publicKey, setPublicKey] = useState(false);
+  const sorobanContext = useSorobanReact();
+
+  const { address } = sorobanContext || {};
+
+  useEffect(() => {
+    if (address) {
+      getKey();
+    }
+  }, [address]);
+
+  const getKey = async () => {
+    if (await window?.freighterApi?.getPublicKey()) {
+      setPublicKey(true);
+    }
+  };
+
   return (
     <>
       <section id="header" className="">
@@ -12,10 +32,17 @@ const Header = () => {
 
             <div className="connectwallet">
               <div className="left-menu flex">
-                <div>
-                  <button className="border border-2 rounded-3xl bg-transparent w-52 border-mygrey py-3 text-mygrey font-semibold">
-                    Connect Wallet
-                  </button>
+                <div className="border border-2 rounded-3xl bg-transparent w-52 border-mygrey py-3 text-mygrey font-semibold">
+                {!publicKey && (
+                  <ConnectButton
+                        label="Connect Wallet"
+                        sorobanContext={sorobanContext}
+                      />
+                )}
+
+                {publicKey && (
+                   <WalletData sorobanContext={sorobanContext} />
+                )}
                 </div>
                 <div className="ml-3">
                   <img src="menu.png" alt="" className="w-9/12" />

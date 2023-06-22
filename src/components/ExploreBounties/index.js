@@ -2,12 +2,26 @@ import React from "react";
 import Cards from "../common/Cards";
 import LeftSideBar from "./leftSideBar";
 import { useNavigate } from "react-router-dom";
+import {AllBounties} from './query';
+import { useQuery } from "@apollo/client";
 
 const ExploreBounties = () => {
   const navigate = useNavigate();
 
-  const handleNavigator = () => {
-    navigate('/listing')
+  const handleNavigator = (item) => {
+    navigate('/listing', {
+      state: {item}
+    })
+    }
+
+    const { loading, data, error } = useQuery(AllBounties);
+
+    if(loading){
+      console.log(data, 'O am')
+
+    }
+    else {
+      console.log(loading)
     }
 
   return (
@@ -23,11 +37,12 @@ const ExploreBounties = () => {
                 <h1 className="text-3xl font-bold">Explore Bounties</h1>
               </div>
               <div className="cards mt-7">
-                <Cards handleClick={handleNavigator}/>
+                {data?.AllBounties.map((item, index) => (
+                  <Cards item={item} handleClick={()=>handleNavigator(item)}/>
 
-                <Cards handleClick={handleNavigator}/>
+                ))}
 
-                <Cards handleClick={handleNavigator}/>
+              
               </div>
             </div>
           </div>

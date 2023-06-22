@@ -1,13 +1,27 @@
 import React from "react";
 import Cards from "../common/Cards/proposalcards";
 import LeftSideBar from "../common/ProfileSidebar";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { useQuery } from "@apollo/client";
+import { allProposals } from "./query";
 
 const MyBounties = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const id = searchParams.get('id');
 
-  const handleNavigator = () => {
-    navigate("/bounty");
+  const { loading, data, erorr } = useQuery(allProposals, {
+    variables: {
+      cooperative: id
+    }
+  })
+
+  console.log(data, "I am data")
+
+  const handleNavigator = (item) => {
+    navigate("/bounty", {
+      state: {item}
+    });
   };
   return (
     <>
@@ -32,12 +46,11 @@ const MyBounties = () => {
                   </select>
                 </div>
               </div>
-              <div className="cards mt-7">
-                <Cards handleClick={handleNavigator} />
-              </div>
-              <div className="cards mt-7">
-                <Cards handleClick={handleNavigator} />
-              </div>
+              {data?.Proposals?.map((item, index) => (
+                <div className="cards mt-7">
+                  <Cards item={item} handleClick={()=>handleNavigator(item)} />
+                </div>
+              ))}
             </div>
           </div>
         </div>

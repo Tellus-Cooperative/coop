@@ -1,6 +1,7 @@
 import React from 'react'
 
-const ProposalCards = ({handleClick}) => {
+const ProposalCards = ({handleClick, item}) => {
+
     return ( 
         <>
          <div onClick={() => handleClick()} className="w-full mt-5 pl-6 pr-3 pt-10 pb-4 rounded-2xl border-2 border-mygrey w-full">
@@ -18,7 +19,7 @@ const ProposalCards = ({handleClick}) => {
                 <div className="tag1">
                   <div className="flex items-center">
                     <img src="/tree.png" alt="" />
-                    <p className="pl-1 text-sm">GAD...RARW</p>
+                    <p className="pl-1 text-sm">{item.public_id.substring(0, 17)}</p>
                   </div>
                 </div>
               </div>
@@ -29,7 +30,7 @@ const ProposalCards = ({handleClick}) => {
             <div className="flex justify-end">
               <div className="button ml-3">
                 <button className="bg-green px-6 py-1  text-white font-semibold rounded-full">
-                 Active
+                 {item.status? "Active": "Inactive"}
                 </button>
               </div>
             </div>
@@ -37,14 +38,10 @@ const ProposalCards = ({handleClick}) => {
         </div>
 
         <div className="content">
-          <h1 className="text-black text-3xl mt-2 font-bold">Governance Proposal</h1>
+          <h1 className="text-black text-3xl mt-2 font-bold">{item.title}</h1>
 
           <p className="mt-4 pr-3">
-            As a bounty hunter for the Soroban Contract Writing in Rust, you
-            will be responsible for thoroughly testing our platform and
-            identifying any potential security vulnerabilities or bugs. You will
-            be tasked with conducting comprehensive penetration testing and code
-            review to ensure that...
+         {item.description.substring(0,260)}
           </p>
 
           <div className="flex mt-3">

@@ -1,11 +1,17 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
+
 
 const Listing = () => {
+  const { state } = useLocation();
+  const { item } = state;
+
+
   return (
     <section id="bountylisting" className="pb-24 mt-10">
       <div>
         <div className="content">
-          <h1 className="text-black text-3xl font-bold">Bounty Listing</h1>
+          <h1 className="text-black text-3xl font-bold">{item.bounty_name}</h1>
 
           <div className="mt-5 flex">
             <div className="w-7/12">
@@ -28,7 +34,7 @@ const Listing = () => {
                     <div className="tag2 ml-4">
                       <div className="flex items-center">
                         <img src="/tree.png" alt="" />
-                        <p className="pl-1 text-sm">GAD...RARW</p>
+                        <p className="pl-1 text-sm">{item?.public_address?.substring(0,10)}</p>
                       </div>
                     </div>
                   </div>
@@ -42,20 +48,7 @@ const Listing = () => {
 
               <div className="content">
                 <p className="text-black mt-8 leading-normal tracking-wider">
-                  As a bounty hunter for the Soroban Contract Writing in Rust,
-                  you will be responsible for thoroughly testing our platform
-                  and identifying any potential security vulnerabilities or
-                  bugs. You will be tasked with conducting comprehensive
-                  penetration testing and code review to ensure that our
-                  platform is secure, reliable, and efficient
-                </p>
-
-                <p className="text-black mt-8 leading-normal tracking-wider">
-                  Successful candidates will have a strong understanding of Rust
-                  development, as well as experience working with blockchain
-                  technology and smart contract writing. You should be
-                  comfortable working with cryptographic algorithms, as well as
-                  developing and testing secure, reliable, and efficient.
+                {item.bounty_description}
                 </p>
               </div>
 
