@@ -13,3 +13,15 @@ query MyQuery($cooperative:String!) {
   
   
 `
+
+export const searchProposals = gql`
+query MyQuery ($title: String!) {
+  Proposals(where: {title: {_ilike: $title}}) {
+    title
+      status
+      description
+      cooperative
+      public_id
+  }
+}
+`

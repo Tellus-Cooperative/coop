@@ -9,12 +9,6 @@ const ProposalCards = ({handleClick, item}) => {
           <div className="w-4/12">
             <div className="tags">
               <div className="flex justify-between">
-                <div className="tag1">
-                  <div className="flex items-center">
-                    <img src="/tree.png" alt="" />
-                    <p className="pl-1 text-sm">My Cooperative by</p>
-                  </div>
-                </div>
 
                 <div className="tag1">
                   <div className="flex items-center">

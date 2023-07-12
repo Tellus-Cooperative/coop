@@ -1,8 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {useNavigate} from 'react-router-dom';
+import { useMutation, useQuery } from "@apollo/client";
+import { useSorobanReact } from "@soroban-react/core";
 
 const NewBounty = () => {
   const navigate = useNavigate();
+  const [title, setTitle] = useState('')
+  const [description, setDescription] = useState('')
+  const [paymetAmount, setPaymentAmount] = useState('')
+  const [bountyType, setBountyType] = useState('')
+  const [bountyDifficulty, setBountyDifficulty] = useState('')
+  const [bountyTopic, setBountyTopic] = useState('') 
+  const [bountyLink, setBountyLink] = useState('')
+  const [publicKeys, setPublicKey] = useState('');
+
+
+  const sorobanContext = useSorobanReact();
+  const {address}= sorobanContext || {}
+
+  useEffect(() => {
+    if(address){
+      getKey(address)
+      console.log(address, "I am address")
+    }},[address])
+
+    const getKey = async (address) => {
+      setPublicKey(address);
+  };
 
   return (
     <section id="bountylisting" className="pb-24 mt-10">

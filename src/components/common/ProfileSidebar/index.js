@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const LeftSideBar = () => {
+const LeftSideBar = ({cooperativeId}) => {
   const navigate = useNavigate();
   return (
     <>
@@ -33,7 +33,7 @@ const LeftSideBar = () => {
           <div className="menu pb-28 mt-16">
             <ul className="mt-10 pb-3 pl-1 items-center font-bold">
               <li className="pb-3 pl-6  flex item-center">Proposal</li>
-              <Link to="/newproposal">
+              <Link to={`/newproposal?id=${cooperativeId }`}>
                 <li className="pb-3 pl-6"> New Proposal</li>
               </Link>
 

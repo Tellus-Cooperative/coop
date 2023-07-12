@@ -23,3 +23,14 @@ mutation MyMutation ($id:uuid!){
   }
   
 `
+
+
+export const searchMemeber = gql`
+query MyQuery ($title: String!) {
+  Cooperatives(where: {title: {_ilike: $title}}) {
+    id
+    title
+    total_Members
+  }
+}
+`

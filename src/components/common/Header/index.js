@@ -9,6 +9,8 @@ const Header = () => {
 
   const { address } = sorobanContext || {};
 
+  console.log(address, "address")
+
   useEffect(() => {
     if (address) {
       getKey();
@@ -31,19 +33,22 @@ const Header = () => {
             </div>
 
             <div className="connectwallet">
-              <div className="left-menu flex">
+              <div className="left-menu flex items-center">
+                  {!publicKey && (
                 <div className="border border-2 rounded-3xl bg-transparent w-52 border-mygrey py-3 text-mygrey font-semibold">
-                {!publicKey && (
-                  <ConnectButton
-                        label="Connect Wallet"
-                        sorobanContext={sorobanContext}
-                      />
-                )}
+                    <ConnectButton
+                      label="Connect Wallet"
+                      sorobanContext={sorobanContext}
+                    />
+                </div>
+                  )}
 
                 {publicKey && (
-                   <WalletData sorobanContext={sorobanContext} />
+                  <div className="border border-2 rounded-full text-center bg-transparent w-72 border-mygrey py-2 text-mygrey font-semibold">
+                    <WalletData sorobanContext={sorobanContext} />
+                  </div>
                 )}
-                </div>
+
                 <div className="ml-3">
                   <img src="menu.png" alt="" className="w-9/12" />
                 </div>
